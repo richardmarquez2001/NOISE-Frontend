@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Home() {
+export default function Profile() {
   return (
     <React.Fragment>
-      home page
+      profile page
     </React.Fragment>
   );
 }

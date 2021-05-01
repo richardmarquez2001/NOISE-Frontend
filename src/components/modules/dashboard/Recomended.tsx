@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function Home() {
+export default function Recomended() {
   return (
     <React.Fragment>
-      home page
+      <h1>Reccomended</h1>
+      <div>stuff</div>
     </React.Fragment>
   );
 }

@@ -1,17 +1,29 @@
 import React from "react";
-import Dashboard from "./components/views/Dashboard";
+import DashboardWrapper from "./components/views/DashboardWrapper";
 import Home from "./components/views/Home";
 import Login from "./components/views/Login";
 import Register from "./components/views/Register";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Landing from "./components/views/Landing";
+import Messages from "./components/views/Messages";
+import Profile from "./components/views/Profile";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Switch>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/messages">
+            <Messages />
+          </Route>
+          <Route path="/profile">
+            <Profile />
+          </Route>
           <Route path="/dashboard">
-            <Dashboard />
+            <DashboardWrapper />
           </Route>
           <Route path="/login">
             <Login />
@@ -20,7 +32,7 @@ function App() {
             <Register />
           </Route>
           <Route path="/">
-            <Home />
+            <Landing />
           </Route>
         </Switch>
       </Router>

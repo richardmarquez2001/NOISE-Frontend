@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function Home() {
+export default function Messages() {
   return (
     <React.Fragment>
-      home page
+      messages page
     </React.Fragment>
   );
 }

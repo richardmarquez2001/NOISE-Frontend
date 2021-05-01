@@ -1,16 +1,17 @@
 import { stringify } from "node:querystring";
 import React, { Component, useState } from "react";
+import RegisterUser from "../actions/RegisterUser";
 
 export default function Register() {
   const [fields, setFields] = useState({
-    firstName: "",
-    lastName: "",
-    username: "",
-    phoneNumber: "",
+    //firstName: "",
+    //lastName: "",
+    name: "",
+    //phoneNumber: "",
     email: "",
-    city: "",
+    //city: "",
     password: "",
-    verifypassword: "",
+    //verifypassword: "",
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -22,14 +23,16 @@ export default function Register() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    console.log(`values were submitted`);
-    console.log(fields);
+    let reg = new RegisterUser();
+    reg.postUsers(fields);
+
     // a call to an external ts file is called here
   }
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
+  function renderForm(){
+    return (
+      <form onSubmit={handleSubmit}>
+        {/* <input
         type="text"
         onChange={handleChange}
         name="firstName"
@@ -40,45 +43,53 @@ export default function Register() {
         onChange={handleChange}
         name="lastName"
         placeholder="Last Name"
-      />
-      <input
-        type="text"
-        onChange={handleChange}
-        name="username"
-        placeholder="Username"
-      />
-      <input
+      /> */}
+        <input
+          type="text"
+          onChange={handleChange}
+          name="name"
+          placeholder="Username"
+        />
+        {/* <input
         type="text"
         onChange={handleChange}
         name="phoneNumber"
         placeholder="Phone Number"
-      />
-      <input
-        type="text"
-        onChange={handleChange}
-        name="email"
-        placeholder="Email"
-      />
-      <input
+      /> */}
+        <input
+          type="text"
+          onChange={handleChange}
+          name="email"
+          placeholder="Email"
+        />
+        {/* <input
         type="text"
         onChange={handleChange}
         name="city"
         placeholder="City"
-      />
-      <input
-        type="password"
-        onChange={handleChange}
-        name="password"
-        placeholder="Password"
-      />
-      <input
+      /> */}
+        <input
+          type="password"
+          onChange={handleChange}
+          name="password"
+          placeholder="Password"
+        />
+        {/* <input
         type="password"
         onChange={handleChange}
         name="verifypassword"
         placeholder="Re-enter Password"
-      />
+      /> */}
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Register</button>
+      </form>
+    )
+  }
+  return (
+    <div>
+      Register
+      {renderForm()}
+      Already have an account? Login Here
+    </div>
   );
 }

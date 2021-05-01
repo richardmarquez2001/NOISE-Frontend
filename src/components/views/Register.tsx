@@ -1,18 +1,15 @@
-import { stringify } from "node:querystring";
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import RegisterUser from "../actions/RegisterUser";
 
 export default function Register() {
   const [fields, setFields] = useState({
-    //firstName: "",
-    //lastName: "",
-    name: "",
-    //phoneNumber: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    //city: "",
+    city: "",
     password: "",
-    //verifypassword: "",
+    verifypassword: ""
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -41,36 +38,42 @@ export default function Register() {
             onChange={handleChange}
             name="firstName"
             placeholder="First Name"
+            value={fields.firstName}
           />
           <input
             type="text"
             onChange={handleChange}
             name="lastName"
             placeholder="Last Name"
+            value={fields.lastName}
           />
           <input
             type="text"
             onChange={handleChange}
             name="email"
             placeholder="Email"
+            value={fields.email}
           />
           <input
             type="text"
             onChange={handleChange}
             name="city"
             placeholder="City"
+            value={fields.city}
           />
           <input
             type="password"
             onChange={handleChange}
             name="password"
             placeholder="Password"
+            value={fields.password}
           />
           <input
             type="password"
             onChange={handleChange}
             name="verifypassword"
             placeholder="Re-enter Password"
+            value={fields.verifypassword}
           />
           <button type="submit">Register</button>
         </form>

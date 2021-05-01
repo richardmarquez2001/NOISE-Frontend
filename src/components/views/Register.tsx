@@ -1,17 +1,18 @@
 import { stringify } from "node:querystring";
 import React, { Component, useState } from "react";
 import { Link } from "react-router-dom";
+import RegisterUser from "../actions/RegisterUser";
 
 export default function Register() {
   const [fields, setFields] = useState({
-    firstName: "",
-    lastName: "",
-    username: "",
-    phoneNumber: "",
+    //firstName: "",
+    //lastName: "",
+    name: "",
+    //phoneNumber: "",
     email: "",
-    city: "",
+    //city: "",
     password: "",
-    verifypassword: "",
+    //verifypassword: "",
   });
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -23,8 +24,9 @@ export default function Register() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    console.log(`values were submitted`);
-    console.log(fields);
+    let reg = new RegisterUser();
+    reg.postUsers(fields);
+
     // a call to an external ts file is called here
   }
 

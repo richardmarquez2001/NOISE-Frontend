@@ -29,52 +29,52 @@ export default function Register() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input 
-        type="text" 
-        onChange={handleChange} 
-        name="firstName"  
+      <input
+        type="text"
+        onChange={handleChange}
+        name="firstName"
         placeholder="First Name"
       />
-      <input 
-        type="text" 
-        onChange={handleChange} 
-        name="lastName"  
+      <input
+        type="text"
+        onChange={handleChange}
+        name="lastName"
         placeholder="Last Name"
       />
-      <input 
-        type="text" 
-        onChange={handleChange} 
-        name="username"  
+      <input
+        type="text"
+        onChange={handleChange}
+        name="username"
         placeholder="Username"
       />
-      <input 
-        type="text" 
-        onChange={handleChange} 
-        name="phoneNumber"  
+      <input
+        type="text"
+        onChange={handleChange}
+        name="phoneNumber"
         placeholder="Phone Number"
       />
-      <input 
-        type="text" 
-        onChange={handleChange} 
-        name="email"  
+      <input
+        type="text"
+        onChange={handleChange}
+        name="email"
         placeholder="Email"
       />
-      <input 
-        type="text" 
-        onChange={handleChange} 
-        name="city"  
+      <input
+        type="text"
+        onChange={handleChange}
+        name="city"
         placeholder="City"
       />
-      <input 
-        type="password" 
-        onChange={handleChange} 
-        name="password"  
+      <input
+        type="password"
+        onChange={handleChange}
+        name="password"
         placeholder="Password"
       />
-      <input 
-        type="password" 
-        onChange={handleChange} 
-        name="verifypassword"  
+      <input
+        type="password"
+        onChange={handleChange}
+        name="verifypassword"
         placeholder="Re-enter Password"
       />
 

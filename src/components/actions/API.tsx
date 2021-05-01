@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-export default class API extends Component {
+export default class Home extends Component {
     render() {
-        return <div>This doesn't have real content yet.</div>;
+        return <div>fff</div>;
     }
 }

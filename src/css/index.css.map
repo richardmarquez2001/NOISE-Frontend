@@ -1,0 +1,17 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACD,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;EACT,UAAU,EAAE,OAAO;CACnB",
+    "sources": [
+        "index.scss",
+        "misc/_variables.scss",
+        "misc/_fonts.scss",
+        "views/_dashboard.scss",
+        "views/_home.scss",
+        "views/_login.scss",
+        "views/_navbar.scss",
+        "views/_profileSetup.scss",
+        "views/_register.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

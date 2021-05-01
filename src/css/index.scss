@@ -1,0 +1,18 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+// misc
+@import 'misc/variables';
+@import 'misc/fonts';
+
+//views
+@import 'views/dashboard';
+@import 'views/home';
+@import 'views/login';
+@import 'views/navbar';
+@import 'views/profileSetup';
+@import 'views/register';
+

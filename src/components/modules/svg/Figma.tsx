@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Figma() {
   return (
-    <a href="https://www.figma.com" target="_blank">
+    <a href="https://www.figma.com/file/H3xQWJt6P4XJ5MUZzfOyvO/NOISE-Final?node-id=0%3A1" target="_blank">
       <svg
         className="icon"
         width="36"

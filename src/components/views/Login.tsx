@@ -21,14 +21,15 @@ export default function Login() {
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
-    event.preventDefault();
-    axios.post(`https://ruhack-noise.herokuapp.com/users/login`,
-      {
-        email: fields.email,
-        password: fields.password
-      }
-    ).then(res => {
+    
+    let data = JSON.stringify({
+      email: fields.email,
+      password: fields.password
+    });
+    axios.post(`https://ruhack-noise.herokuapp.com/users/login`, JSON.parse(data))
+      .then(res => {
       setErrorOccured(false);
+      console.log("SHEESH");
       console.log(res)
       localStorage.setItem('token', res.data.accessToken)
       history.push("/home")
@@ -36,6 +37,7 @@ export default function Login() {
       setErrorOccured(true);
       console.log("LOGIN FAILED")
     })
+    event.preventDefault(); 
   }
 
   return (
@@ -45,7 +47,7 @@ export default function Login() {
       </div>
       <div className="login-body">
         <h1>Login</h1>
-        <form action="" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           <input
             type="email"
             name="email"

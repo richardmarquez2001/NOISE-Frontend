@@ -31,7 +31,11 @@ export default function Register() {
       password: fields.password,
     });
     event.preventDefault();
-    axios
+    if (fields.email === "" || fields.firstName === "" || fields.city === "" || fields.password === "" || fields.password !== fields.verifypassword){
+      setErrorOccured(true);
+      console.log("REGISTER FAILED!");
+    }else{
+      axios
       .post(`https://ruhack-noise.herokuapp.com/users`, JSON.parse(info))
       .then(
         (res) => {
@@ -43,9 +47,11 @@ export default function Register() {
         (err) => {
           // FAILED
           setErrorOccured(true);
-          console.log("LOGIN FAILED");
+          console.log("REGISTER FAILED");
         }
       );
+    }
+    
   }
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import RegisterUser from "../actions/RegisterUser";
+import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
 
 export default function Register() {
   const [fields, setFields] = useState({
@@ -9,8 +9,12 @@ export default function Register() {
     email: "",
     city: "",
     password: "",
-    verifypassword: ""
+    verifypassword: "",
   });
+
+  const [errorOccured, setErrorOccured] = useState(false);
+
+  const history = useHistory();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const { name, value } = e.target;
@@ -20,20 +24,28 @@ export default function Register() {
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
+    let info = JSON.stringify({
+      name: `${fields.firstName} ${fields.lastName}`,
+      email: fields.email,
+      city: fields.city,
+      password: fields.password,
+    });
     event.preventDefault();
-    axios.post(`https://ruhack-noise.herokuapp.com/users/login`,
-      {
-        email: fields.email,
-        password: fields.password
-      }
-    ).then(res => {
-      console.log(res)
-      localStorage.setItem('token', res.data.token)
-      history.push("/home")
-    }, err =>{
-      // FAILED
-      console.log("LOGIN FAILED")
-    })
+    axios
+      .post(`https://ruhack-noise.herokuapp.com/users`, JSON.parse(info))
+      .then(
+        (res) => {
+          console.log(res);
+          localStorage.setItem("token", res.data.token);
+          setErrorOccured(false);
+          history.push("/home");
+        },
+        (err) => {
+          // FAILED
+          setErrorOccured(true);
+          console.log("LOGIN FAILED");
+        }
+      );
   }
 
   return (
@@ -89,6 +101,7 @@ export default function Register() {
         <p>
           Already Have an Account? <Link to="/login">Login Here.</Link>
         </p>
+        {errorOccured && <div>Register Failed</div>}
       </div>
     </React.Fragment>
   );

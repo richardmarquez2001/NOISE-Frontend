@@ -1,6 +1,6 @@
 import React from "react";
-import Figma from "./svg/Figma";
-import Github from "./svg/Github";
+import Figma from "../svg/Figma";
+import Github from "../svg/Github";
 export default function Navbar() {
   return (
     <nav className="navbar">
@@ -18,7 +18,7 @@ export default function Navbar() {
             team
           </a>
         </div>
-        <h1 className="logo">noise.</h1>
+        <h1 className="logo shake">noise.</h1>
       </div>
     </nav>
   );

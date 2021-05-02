@@ -6,7 +6,7 @@ import Project from "./CreateProject";
 export default function CreateProjectWrapper() {
   return (
     <React.Fragment>
-      <Sidebar dashboard="purple"/>
+      <Sidebar createproject="purple"/>
       <Project />
     </React.Fragment>
   );

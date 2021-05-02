@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./components/views/Landing";
 import Messages from "./components/views/Messages";
 import Profile from "./components/views/Profile";
+import HomeWrapper from "./components/views/HomeWrapper";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/home">
-            <Home />
+            <HomeWrapper />
           </Route>
           <Route path="/messages">
             <Messages />

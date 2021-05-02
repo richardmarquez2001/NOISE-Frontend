@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from 'react-router-dom';
 import RegisterUser from "../actions/RegisterUser";
 
 export default function Register() {
@@ -21,10 +21,6 @@ export default function Register() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    let reg = new RegisterUser();
-    reg.postUsers(fields);
-
-    // a call to an external ts file is called here
   }
 
   return (

@@ -32,7 +32,9 @@ export default function Login() {
           console.log("SHEESH");
           console.log(res);
           localStorage.setItem("token", res.data.accessToken);
-          localStorage.setItem("user", res.data.user);
+          localStorage.setItem("user", res.data.profile._id)
+          localStorage.setItem("name", res.data.profile.name);
+          localStorage.setItem("image", res.data.profile.image)
           history.push("/home");
         },
         (err) => {

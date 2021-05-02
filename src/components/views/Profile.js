@@ -55,6 +55,7 @@ export default function Profile() {
             <Link style={{ textDecoration: "None" }} to="#">
               <span
                 onClick={() => {
+                  getData()
                   setEditting(!editting);
                 }}
               >
@@ -72,7 +73,8 @@ export default function Profile() {
               <input
                 type="text"
                 contentEditable="false"
-                placeholder={profile?.bio || "Hello World"}
+                defaultValue={profile?.bio||""}
+                placeholder="Add a bio"
                 onChange={(e) => {
                   setProfile({ ...profile, bio: e.target.value });
                 }}
@@ -125,12 +127,17 @@ export default function Profile() {
             <h1>Portfolio Link</h1>
             <div className="input-container">
               {!editting ? (
-                <p>{profile?.bio || "Hello World"}</p>
+                <p>{profile?.site || "Personal site"}</p>
               ) : (
                 <input
                   type="text"
                   contentEditable="false"
-                  value={profile?.link || "None"}
+                  defaultValue={profile?.site}
+                  placeholder="Portfolio URL"
+                  onChange={(e) => {
+                      let newProf = { ...profile, site:e.target.value };
+                      setProfile(newProf);
+                  }}
                 />
               )}
             </div>
@@ -142,25 +149,79 @@ export default function Profile() {
                 <div className="icon">
                   <LinkedIcon />
                 </div>
-                <div className="detail">janedoe7</div>
+                <div className="detail">
+                  {!editting ?
+                    (<p>{profile?.media.linkedin || ""}</p>) :
+                    (<input
+                      type="text"
+                      contentEditable="false"
+                      defaultValue={profile?.media.linkedin}
+                      placeholder="LinkedIn"
+                      onChange={(e) => {
+                          let newProf = { ...profile, media:{...profile.media, linkedin:e.target.value} };
+                          setProfile(newProf);
+                      }}
+                    />
+                  )}</div>
               </div>
               <div className="social">
                 <div className="icon">
                   <GithubIcon />
+
+
                 </div>
-                <div className="detail">janedoe7</div>
+                <div className="detail">
+                  {!editting ?
+                    (<p>{profile?.media.github || ""}</p>) :
+                    (<input
+                      type="text"
+                      contentEditable="false"
+                      defaultValue={profile?.media.github}
+                      placeholder="Github"
+                      onChange={(e) => {
+                          let newProf = { ...profile, media:{...profile.media, github:e.target.value} };
+                          setProfile(newProf);
+                      }}
+                    />
+                  )}</div>
               </div>
               <div className="social">
                 <div className="icon">
                   <FacebookIcon />
                 </div>
-                <div className="detail">janedoe7</div>
+                <div className="detail">
+                  {!editting ?
+                    (<p>{profile?.media.facebook || ""}</p>) :
+                    (<input
+                      type="text"
+                      contentEditable="false"
+                      defaultValue={profile?.media.facebook}
+                      placeholder="Facebook"
+                      onChange={(e) => {
+                          let newProf = { ...profile, media:{...profile.media, facebook:e.target.value} };
+                          setProfile(newProf);
+                      }}
+                    />
+                  )}</div>
               </div>
               <div className="social">
                 <div className="icon">
                   <InstaIcon />
                 </div>
-                <div className="detail">janedoe7</div>
+                <div className="detail">
+                  {!editting ?
+                    (<p>{profile?.media.instagram || ""}</p>) :
+                    (<input
+                      type="text"
+                      contentEditable="false"
+                      defaultValue={profile?.media.instagram}
+                      placeholder="Instagram"
+                      onChange={(e) => {
+                          let newProf = { ...profile, media:{...profile.media, instagram:e.target.value} };
+                          setProfile(newProf);
+                      }}
+                    />
+                  )}</div>
               </div>
             </div>
           </div>
@@ -186,6 +247,8 @@ export default function Profile() {
                           city: profile.city,
                           bio: profile.bio,
                           tags: profile.tags,
+                          media: profile.media,
+                          site: profile.site,
                         },
                         { headers: { Authorization: "Bearer " + token } }
                       )

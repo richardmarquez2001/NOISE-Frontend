@@ -3,13 +3,15 @@ import Recomended from "./Recomended";
 import Requests from "./Requests";
 import Statistics from "./Statistics";
 import { Link } from "react-router-dom";
-import janedoe from "../../../media/img/janedoe.png";
+import janedoe from "../../../media/img/placeholder.png";
 import requests from "../../../media/img/requests.png";
 import stats from "../../../media/img/stats.png";
 import recommended from "../../../media/img/recommended.png";
 
 export default function Dashboard() {
-  const name = "Jane Doe"; //ooga booga api call get name
+  const name = localStorage.getItem("name") || ""; //ooga booga api call get name
+  let image = localStorage.getItem("image")
+  if (image == "undefined"){image=janedoe;}
 
   return (
     <div className="content-container">
@@ -22,7 +24,7 @@ export default function Dashboard() {
             <p>Are you ready to make some noise?</p>
           </div>
           <div className="img-container">
-            <img src={janedoe} alt="profile picture" />
+            <img src={image} alt="profile picture" />
           </div>
         </header>
         <hr />

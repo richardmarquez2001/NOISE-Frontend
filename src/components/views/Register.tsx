@@ -41,7 +41,9 @@ export default function Register() {
         (res) => {
           console.log(res);
           localStorage.setItem("token", res.data.token);
-          localStorage.setItem("user", res.data.user);
+          localStorage.setItem("user", res.data.profile.user);
+          localStorage.setItem("image", res.data.profile.image);
+          localStorage.setItem("name", res.data.profile.name);
           setErrorOccured(false);
           history.push("/home");
         },

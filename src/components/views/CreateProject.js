@@ -12,7 +12,7 @@ export default function Profile() {
   const history = useHistory();
 
   const token = localStorage.getItem("token");
-  const userid = localStorage.getItem('user');
+  const userid = localStorage.getItem("user");
   console.log(userid)
   if (token == undefined) {
     history.push("/");

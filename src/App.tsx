@@ -18,27 +18,34 @@ function App() {
           <Route path="/home">
             <HomeWrapper />
           </Route>
+
           <Route path="/messages">
             <MessagesWrapper />
           </Route>
+
           <Route path="/profile">
             <ProfileWrapper />
           </Route>
+
           <Route path="/dashboard">
             <DashboardWrapper />
           </Route>
+
           <Route path="/login">
             <Login />
           </Route>
+
           <Route path="/register">
             <Register />
           </Route>
+
           <Route path="/createproject">
             <CreateProjectWrapper />
           </Route>
+
           <Route path="/">
-          </Route>
             <Landing />
+          </Route>
         </Switch>
       </Router>
     </div>

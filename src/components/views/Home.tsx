@@ -6,7 +6,7 @@ export default function Home() {
 
   const history = useHistory()
   const token = localStorage.getItem('token')
-
+  
   if(token==undefined){
     history.push("/")
   }

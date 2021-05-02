@@ -9,6 +9,8 @@ export default function Login() {
     password: "",
   });
 
+  const[errorOccured, setErrorOccured] = useState(false);
+
   const history = useHistory();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -26,11 +28,12 @@ export default function Login() {
         password: fields.password
       }
     ).then(res => {
+      setErrorOccured(false);
       console.log(res)
       localStorage.setItem('token', res.data.accessToken)
       history.push("/home")
     }, err =>{
-      // FAILED
+      setErrorOccured(true);
       console.log("LOGIN FAILED")
     })
   }
@@ -72,6 +75,7 @@ export default function Login() {
             </Link>
           </p>
         </div>
+        {errorOccured && <div>Invalid Login</div>}
       </div>
       <img
         className="login-photo"

@@ -59,6 +59,7 @@
 .navbar .logo {
   margin-right: 50px;
   font-size: 40px;
+  font-weight: bold;
 }
 
 @media (max-width: 1200px) {
@@ -100,6 +101,7 @@
 
 .landing-container .body .slogan em {
   color: #6E4CE6;
+  font-style: normal;
 }
 
 .landing-container .body p {

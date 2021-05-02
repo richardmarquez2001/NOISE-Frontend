@@ -78,6 +78,7 @@ export default function Profile() {
               {editting &&
                 <>
                   <input
+                    className="interested-box"
                     type="text"
                     contentEditable="false"
                     placeholder="interested position"

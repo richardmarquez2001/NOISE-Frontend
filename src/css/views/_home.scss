@@ -52,17 +52,17 @@
         }
         .owner-name {
           margin-top: 30px;
-          font-size: 30px;
+          font-size: 25px;
           text-align: center;
         }
         .city {
-          font-size: 25px;
+          font-size: 20px;
           text-align: center;
           font-weight: normal;
         }
         .looking-for {
           margin-top: 50px;
-          font-size: 30px;
+          font-size: 25px;
           text-align: center;
         }
         .tag {
@@ -78,6 +78,7 @@
         border-radius: 10px;
         background-color: #f4f4f4;
         padding: 30px;
+        min-width: calc(100% - 375px);
         .project-name {
           color: #7dbcfb;
           font-size: 30px;

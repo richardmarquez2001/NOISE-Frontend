@@ -35,7 +35,7 @@ export default function Login() {
           localStorage.setItem("user", res.data.profile._id)
           localStorage.setItem("name", res.data.profile.name);
           localStorage.setItem("image", res.data.profile.image)
-          history.push("/home");
+          history.push("/profile");
         },
         (err) => {
           setErrorOccured(true);

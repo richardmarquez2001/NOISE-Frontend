@@ -45,7 +45,7 @@ export default function Register() {
           localStorage.setItem("image", res.data.profile.image);
           localStorage.setItem("name", res.data.profile.name);
           setErrorOccured(false);
-          history.push("/home");
+          history.push("/profile");
         },
         (err) => {
           // FAILED

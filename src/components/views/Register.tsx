@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
-=======
-import { Link, useHistory } from 'react-router-dom';
-import RegisterUser from "../actions/RegisterUser";
->>>>>>> 3e82d232533ba955ac92084af9447d0b49742148
 
 export default function Register() {
   const [fields, setFields] = useState({

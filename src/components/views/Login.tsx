@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import loginPicture from "../../media/img/loginPicture.png";
 import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 export default function Login() {
@@ -26,7 +27,7 @@ export default function Login() {
       }
     ).then(res => {
       console.log(res)
-      localStorage.setItem('token', res.data.token)
+      localStorage.setItem('token', res.data.accessToken)
       history.push("/home")
     }, err =>{
       // FAILED
@@ -36,7 +37,9 @@ export default function Login() {
 
   return (
     <React.Fragment>
-      <h1 className="logo">noise.</h1>
+      <div className="logo-container">
+        <h1 className="logo shake">noise.</h1>
+      </div>
       <div className="login-body">
         <h1>Login</h1>
         <form action="" onSubmit={handleSubmit}>
@@ -54,13 +57,27 @@ export default function Login() {
             placeholder="password"
             value={fields.password}
           />
-          <Link to="#">Forgot Password?</Link>
+          <div className="forgot-container">
+            <Link to="#" style={{ textDecoration: "None" }}>
+              <span>Forgot Password?</span>
+            </Link>
+          </div>
           <button type="submit">Sign In</button>
         </form>
-        <p>
-          Don't Have an Account? <Link to="/Register">Register Here.</Link>
-        </p>
+        <div className="reg-here-container">
+          <p>
+            Don't Have an Account?{" "}
+            <Link to="/Register" style={{ textDecoration: "None" }}>
+              <span>Register Here.</span>
+            </Link>
+          </p>
+        </div>
       </div>
+      <img
+        className="login-photo"
+        src={loginPicture}
+        alt="girl floating holding a phone"
+      />
     </React.Fragment>
   );
 }

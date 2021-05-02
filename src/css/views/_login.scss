@@ -1,0 +1,99 @@
+.logo-container {
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-body {
+  position: absolute;
+  margin-top: 100px;
+  right: 35%;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  h1 {
+    color: $accent-color;
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    input {
+      border: none;
+      border-radius: 10px;
+      background-color: $input-color;
+      color: $input-text-color;
+      font-weight: bold;
+      font-size: 15px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+    .forgot-container {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 0px 20px 0px;
+      span {
+        color: $input-text-color;
+        font-size: 15px;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+    button {
+      border: none;
+      font-size: 20px;
+      background-color: $accent-color;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+    }
+  }
+  .reg-here-container {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    p {
+      margin-top: 100px;
+      color: $input-text-color;
+      font-size: 15px;
+      span {
+        color: $input-text-color;
+        text-decoration: underline;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.login-photo {
+  z-index: -1;
+  position: absolute;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+@media (max-width: 1600px) {
+  .login-body {
+    right: 20%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .login-body {
+    position: static;
+    width: 100%;
+    align-items: center;
+    margin-top: 100px;
+  }
+  .login-photo {
+    display: none;
+  }
+}

@@ -5,9 +5,9 @@ import Login from "./components/views/Login";
 import Register from "./components/views/Register";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./components/views/Landing";
-import Messages from "./components/views/Messages";
-import Profile from "./components/views/Profile";
 import HomeWrapper from "./components/views/HomeWrapper";
+import MessagesWrapper from "./components/views/MessagesWrapper";
+import ProfileWrapper from "./components/views/ProfileWrapper";
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
             <HomeWrapper />
           </Route>
           <Route path="/messages">
-            <Messages />
+            <MessagesWrapper />
           </Route>
           <Route path="/profile">
-            <Profile />
+            <ProfileWrapper />
           </Route>
           <Route path="/dashboard">
             <DashboardWrapper />

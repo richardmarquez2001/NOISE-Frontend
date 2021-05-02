@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Messages() {
   return (
-    <React.Fragment>
+    <div className="content-container">
       messages page
-    </React.Fragment>
+    </div>
   );
 }

@@ -614,6 +614,12 @@ html {
   bottom: 40px;
 }
 
+.content-container {
+  position: absolute;
+  width: calc(100vw - 220px);
+  right: 0;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;

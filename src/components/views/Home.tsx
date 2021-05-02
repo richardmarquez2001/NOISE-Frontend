@@ -28,7 +28,7 @@ export default function Home() {
     });
 
   return (
-    <React.Fragment>
+    <div className="content-container">
       <div className="desc-container">
         <h1>Browse through local projects and opportunities!</h1>
         <h2>Get matched and gain experience.</h2>
@@ -50,6 +50,6 @@ export default function Home() {
       />
       <button><No /></button>
       <button><Yes /></button>
-    </React.Fragment>
+    </div>
   );
 }

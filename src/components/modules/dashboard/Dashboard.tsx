@@ -7,7 +7,7 @@ export default function Dashboard() {
   const name = "Jane Doe"; //ooga booga api call get name
 
   return (
-    <React.Fragment>
+    <div className="content-container">
       <header>
         <h1>Hi {name}</h1>
         <p>Are you ready to make some noise?</p>
@@ -16,6 +16,6 @@ export default function Dashboard() {
       <Requests />
       <Statistics />
       <Recomended />
-    </React.Fragment>
+    </div>
   );
 }

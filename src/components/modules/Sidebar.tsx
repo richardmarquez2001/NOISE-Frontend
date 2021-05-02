@@ -7,27 +7,27 @@ export default function Sidebar() {
       <h1 className="logo shake">noise.</h1>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/home">
-          Home
+          <p>home</p>
         </Link>
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/dashboard">
-          dashboard
+          <p>dashboard</p>
         </Link>
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/messages">
-          messages
+          <p>messages</p>
         </Link>
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/profile">
-          profile
+          <p>profile</p>
         </Link>
       </div>
-      <div className="link">
-        <Link style={{ textDecoration: "None" }} to="/">
-          log out
+      <div className="link logout">
+        <Link style={{ textDecoration: "None" }} to="/" onClick={() => localStorage.clear()}>
+          <p>log out</p>
         </Link>
       </div>
     </nav>

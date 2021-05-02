@@ -27,10 +27,10 @@ export default function Profile() {
         headers: { Authorization: "Bearer " + token },
       })
       .then((res) => {
+        console.log(res)
         setProfile(res.data.user);
       })
       .catch((err) => {
-        console.log("LOGIN FAILED");
       });
   };
 
@@ -84,7 +84,7 @@ export default function Profile() {
           <div className="interested-positions-containers">
             <h1>Interested Positions</h1>
             <div className="interest-container">
-              {profile?.tags.map((tag) => {
+              {profile!=undefined && profile?.tags?.map((tag) => {
                 const fn = () => {
                   let newProf = { ...profile };
                   var index = newProf.tags.indexOf(tag);
@@ -127,12 +127,12 @@ export default function Profile() {
             <h1>Portfolio Link</h1>
             <div className="input-container">
               {!editting ? (
-                <p>{profile?.site || "Personal site"}</p>
+                <>{profile?.site || "Personal site"}</>
               ) : (
                 <input
                   type="text"
                   contentEditable="false"
-                  defaultValue={profile?.site}
+                  defaultValue={profile?.site || ""}
                   placeholder="Portfolio URL"
                   onChange={(e) => {
                       let newProf = { ...profile, site:e.target.value };
@@ -151,11 +151,11 @@ export default function Profile() {
                 </div>
                 <div className="detail">
                   {!editting ?
-                    (<p>{profile?.media.linkedin || ""}</p>) :
+                    (<>{profile?.media?.linkedin || ""}</>) :
                     (<input
                       type="text"
                       contentEditable="false"
-                      defaultValue={profile?.media.linkedin}
+                      defaultValue={profile?.media?.linkedin||""}
                       placeholder="LinkedIn"
                       onChange={(e) => {
                           let newProf = { ...profile, media:{...profile.media, linkedin:e.target.value} };
@@ -172,11 +172,11 @@ export default function Profile() {
                 </div>
                 <div className="detail">
                   {!editting ?
-                    (<p>{profile?.media.github || ""}</p>) :
+                    (<>{profile?.media.github || ""}</>) :
                     (<input
                       type="text"
                       contentEditable="false"
-                      defaultValue={profile?.media.github}
+                      defaultValue={profile?.media?.github||""}
                       placeholder="Github"
                       onChange={(e) => {
                           let newProf = { ...profile, media:{...profile.media, github:e.target.value} };
@@ -191,11 +191,11 @@ export default function Profile() {
                 </div>
                 <div className="detail">
                   {!editting ?
-                    (<p>{profile?.media.facebook || ""}</p>) :
+                    (<>{profile?.media?.facebook || ""}</>) :
                     (<input
                       type="text"
                       contentEditable="false"
-                      defaultValue={profile?.media.facebook}
+                      defaultValue={profile?.media?.facebook||""}
                       placeholder="Facebook"
                       onChange={(e) => {
                           let newProf = { ...profile, media:{...profile.media, facebook:e.target.value} };
@@ -214,7 +214,7 @@ export default function Profile() {
                     (<input
                       type="text"
                       contentEditable="false"
-                      defaultValue={profile?.media.instagram}
+                      defaultValue={profile?.media?.instagram||""}
                       placeholder="Instagram"
                       onChange={(e) => {
                           let newProf = { ...profile, media:{...profile.media, instagram:e.target.value} };

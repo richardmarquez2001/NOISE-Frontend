@@ -29,6 +29,7 @@ export default function Register() {
       email: fields.email,
       city: fields.city,
       password: fields.password,
+      tags: ["front-end developer", "ui designer"]
     });
     event.preventDefault();
     if (fields.email === "" || fields.firstName === "" || fields.city === "" || fields.password === "" || fields.password !== fields.verifypassword){
@@ -40,10 +41,10 @@ export default function Register() {
       .then(
         (res) => {
           console.log(res);
-          localStorage.setItem("token", res.data.token);
-          localStorage.setItem("user", res.data.profile.user);
-          localStorage.setItem("image", res.data.profile.image);
+          localStorage.setItem("token", res.data.accessToken);
+          localStorage.setItem("user", res.data.profile._id)
           localStorage.setItem("name", res.data.profile.name);
+          localStorage.setItem("image", res.data.profile.image)
           setErrorOccured(false);
           history.push("/profile");
         },

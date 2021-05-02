@@ -29,8 +29,6 @@ export default function Login() {
       .then(
         (res) => {
           setErrorOccured(false);
-          console.log("SHEESH");
-          console.log(res);
           localStorage.setItem("token", res.data.accessToken);
           localStorage.setItem("user", res.data.profile._id)
           localStorage.setItem("name", res.data.profile.name);

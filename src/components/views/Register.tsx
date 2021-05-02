@@ -50,58 +50,77 @@ export default function Register() {
 
   return (
     <React.Fragment>
-      <h1 className="logo">noise.</h1>
+      <div className="logo-container">
+        <h1 className="logo shake">noise.</h1>
+      </div>
       <div className="register-body">
-        <h1>Register</h1>
         <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            onChange={handleChange}
-            name="firstName"
-            placeholder="First Name"
-            value={fields.firstName}
-          />
-          <input
-            type="text"
-            onChange={handleChange}
-            name="lastName"
-            placeholder="Last Name"
-            value={fields.lastName}
-          />
-          <input
-            type="text"
-            onChange={handleChange}
-            name="email"
-            placeholder="Email"
-            value={fields.email}
-          />
-          <input
-            type="text"
-            onChange={handleChange}
-            name="city"
-            placeholder="City"
-            value={fields.city}
-          />
-          <input
-            type="password"
-            onChange={handleChange}
-            name="password"
-            placeholder="Password"
-            value={fields.password}
-          />
-          <input
-            type="password"
-            onChange={handleChange}
-            name="verifypassword"
-            placeholder="Re-enter Password"
-            value={fields.verifypassword}
-          />
-          <button type="submit">Register</button>
+          <h1>Register</h1>
+          <div className="input-row">
+            <input
+              className="left-input"
+              type="text"
+              onChange={handleChange}
+              name="firstName"
+              placeholder="First Name"
+              value={fields.firstName}
+            />
+            <input
+              type="text"
+              onChange={handleChange}
+              name="lastName"
+              placeholder="Last Name"
+              value={fields.lastName}
+            />
+          </div>
+          <div className="input-row">
+            <input
+              className="left-input"
+              type="text"
+              onChange={handleChange}
+              name="email"
+              placeholder="Email"
+              value={fields.email}
+            />
+            <input
+              type="text"
+              onChange={handleChange}
+              name="city"
+              placeholder="City"
+              value={fields.city}
+            />
+          </div>
+          <div className="input-row">
+            <input
+              className="left-input last-row-input"
+              type="password"
+              onChange={handleChange}
+              name="password"
+              placeholder="Password"
+              value={fields.password}
+            />
+            <input
+            className="last-row-input"
+              type="password"
+              onChange={handleChange}
+              name="verifypassword"
+              placeholder="Re-enter Password"
+              value={fields.verifypassword}
+            />
+          </div>
+          <div className="invalid-reg-container">
+            {errorOccured && <div>*Invalid Registration</div>}
+          </div>
+          <div className="link-container">
+            <div id="login-here">
+              Already Have an Account?{" "}
+              <Link to="/login">
+                <span>Login Here.</span>
+              </Link>
+            </div>
+            <button type="submit">Register</button>
+          </div>
         </form>
-        <p>
-          Already Have an Account? <Link to="/login">Login Here.</Link>
-        </p>
-        {errorOccured && <div>Register Failed</div>}
       </div>
     </React.Fragment>
   );

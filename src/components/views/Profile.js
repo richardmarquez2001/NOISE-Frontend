@@ -73,10 +73,10 @@ export default function Profile() {
                   if (index !== -1) {newProf.tags.splice(index, 1);}
                   setProfile(newProf)
                 }
-                return <div className="interest" id="interest1">{tag}
-                <a href="#" onClick={fn}>
-                  x
-                </a>
+                return <div className="interest" id="interest1">{tag}&nbsp;
+                {editting&&<a href="#" onClick={fn}>
+                 x
+                </a>}
               </div>})}
               {editting &&
                 <>

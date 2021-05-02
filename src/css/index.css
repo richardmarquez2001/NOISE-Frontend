@@ -231,7 +231,7 @@ html {
 }
 
 .content-container .home-container .project-container .profile-info .city {
-  font-size: 10px;
+  font-size: 25px;
   text-align: center;
   font-weight: normal;
 }
@@ -244,12 +244,11 @@ html {
 
 .content-container .home-container .project-container .profile-info .tag {
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   background-color: #dbdbdb;
   padding: 10px;
   border-radius: 20px;
-  color: blue;
 }
 
 .content-container .home-container .project-container .project-info {
@@ -265,7 +264,7 @@ html {
 
 .content-container .home-container .project-container .project-info .project-desc {
   padding: 20px 0px;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .content-container .home-container .project-container .project-info h2 {
@@ -988,8 +987,10 @@ html {
 }
 
 .profile-container main .bio-container input {
-  font-size: 15px;
   border: none;
+  padding: 10px;
+  font-size: 15px;
+  width: 300px;
   padding-left: 10px;
 }
 

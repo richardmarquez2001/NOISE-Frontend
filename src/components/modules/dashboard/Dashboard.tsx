@@ -2,6 +2,7 @@ import React from "react";
 import Recomended from "./Recomended";
 import Requests from "./Requests";
 import Statistics from "./Statistics";
+import { Link } from "react-router-dom";
 import janedoe from "../../../media/img/janedoe.png";
 import requests from "../../../media/img/requests.png";
 import stats from "../../../media/img/stats.png";
@@ -26,13 +27,16 @@ export default function Dashboard() {
         </header>
         <hr />
         <div className="find-create">
-          <div className="find">
-            <h1>Find a Project</h1>
-            <p>
-              Find freelance projects to gain experience and expand their
-              portfolio.
-            </p>
-          </div>
+          <Link to="/home">
+            <div className="find">
+              <h1>Find a Project</h1>
+              <p>
+                Find freelance projects to gain experience and expand their
+                portfolio.
+              </p>
+            </div>
+          </Link>
+          <Link to="/createproject">
           <div className="create">
             <h1>Create a Project</h1>
             <p>
@@ -40,6 +44,7 @@ export default function Dashboard() {
               job done.
             </p>
           </div>
+          </Link>
         </div>
         <div className="main-container">
           <Requests img={requests}/>

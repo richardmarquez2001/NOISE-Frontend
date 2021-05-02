@@ -27,7 +27,7 @@ export default function Dashboard() {
         </header>
         <hr />
         <div className="find-create">
-          <Link to="/home">
+          <Link to="/home" style={{ textDecoration: "None" }}>
             <div className="find">
               <h1>Find a Project</h1>
               <p>
@@ -36,7 +36,7 @@ export default function Dashboard() {
               </p>
             </div>
           </Link>
-          <Link to="/createproject">
+          <Link to="/createproject" style={{ textDecoration: "None" }}>
           <div className="create">
             <h1>Create a Project</h1>
             <p>

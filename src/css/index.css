@@ -84,6 +84,7 @@ html {
   margin: 30px;
   border-radius: 30px;
   max-width: 500px;
+  color: black;
 }
 
 .dashboard-container .find-create .find:hover {
@@ -96,6 +97,7 @@ html {
   margin: 30px;
   border-radius: 30px;
   max-width: 500px;
+  color: black;
 }
 
 .dashboard-container .find-create .create:hover {
@@ -226,19 +228,19 @@ html {
 
 .content-container .home-container .project-container .profile-info .owner-name {
   margin-top: 30px;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
 
 .content-container .home-container .project-container .profile-info .city {
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
   font-weight: normal;
 }
 
 .content-container .home-container .project-container .profile-info .looking-for {
   margin-top: 50px;
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
 }
 
@@ -255,6 +257,7 @@ html {
   border-radius: 10px;
   background-color: #f4f4f4;
   padding: 30px;
+  min-width: calc(100% - 375px);
 }
 
 .content-container .home-container .project-container .project-info .project-name {
@@ -1012,7 +1015,7 @@ html {
 .profile-container main .interested-positions-containers .interest-container .interest {
   font-size: 25px;
   margin: 10px 20px;
-  padding: 5px;
+  padding: 5px 20px;
   border-radius: 15px;
 }
 

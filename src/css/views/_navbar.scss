@@ -1,0 +1,50 @@
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  .icon {
+    margin: 20px 0px 20px 15px;
+    height: 40px;
+  }
+  .nav-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .links {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 30%;
+      font-size: x-large;
+      margin-left: 20px;
+      .link {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+    }
+  }
+  .logo {
+    margin-right: 50px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .links {
+    width: 60% !important;
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .icon {
+    margin: 20px 0px 20px 0px !important;
+  }
+  .links {
+    width: 100% !important;
+  }
+  .logo {
+    margin-right: 0px !important;
+  }
+}

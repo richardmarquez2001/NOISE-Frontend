@@ -1,7 +1,13 @@
+@font-face {
+  font-family: Aileron;
+  src: url(./fonts/Aileron/Aileron-Regular.ttf);
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: inherit;
+	font-family: Aileron, sans-serif;
 }
 
 // misc
@@ -15,4 +21,5 @@
 @import 'views/navbar';
 @import 'views/profileSetup';
 @import 'views/register';
+@import 'views/landing';
 

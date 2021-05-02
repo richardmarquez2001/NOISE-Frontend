@@ -1,0 +1,51 @@
+.landing-container {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  .body {
+    padding: 0px 0px 100px 10%;
+    .slogan {
+      font-size: 80px;
+      em {
+        color: $accent-color;
+      }
+    }
+    p {
+      font-size: 30px;
+      max-width: 700px;
+      margin-bottom: 30px;
+    }
+    #login-btn {
+      font-size: 30px;
+      background-color: $accent-color;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+      padding: 14px 50px;
+    }
+    #reg-btn {
+      font-size: 30px;
+      border: 2px solid $accent-color;
+      border-radius: 30px;
+      color: $accent-color;
+      text-decoration: none;
+      padding: 12px 40px;
+      margin-left: 40px;
+    }
+  }
+}
+
+.landing-photo {
+  z-index: -1;
+  position: absolute;
+  height: 80%;
+  top: 10%;
+  right: 10%;
+}
+
+
+@media (max-width: 1200px) {
+  .landing-photo {
+    display: none;
+  }
+}

@@ -36,6 +36,28 @@
   }
 }
 
+.hover-me {
+  position: absolute;
+  width: 200px;
+  top: 60px;
+  right: 100px;
+}
+
+#hideMe {
+  -webkit-animation: cssAnimation 5s forwards; 
+  animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+  0%   {opacity: 1;}
+  90%  {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 .landing-photo {
   z-index: -1;
   position: absolute;
@@ -123,7 +145,7 @@
       h1 {
         font-size: 40px;
       }
-      p{
+      p {
         font-size: 25px;
       }
     }

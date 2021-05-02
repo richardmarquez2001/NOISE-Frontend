@@ -12,10 +12,12 @@ import dylan from "../../media/img/dylan.png";
 import ric from "../../media/img/ric.png";
 import van from "../../media/img/van.png";
 import TeamCard from "../modules/landing/TeamCard";
+import hoverMe from "../../media/img/hoverme.png";
 
 export default function Landing() {
   return (
     <React.Fragment>
+      <img className="hover-me" id="hideMe" src={hoverMe} alt="hover me pointing to logo"/>
       <Navbar />
       <div className="landing-container">
         <div className="body">

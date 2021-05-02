@@ -216,6 +216,7 @@ html {
   }
   .links {
     width: 100% !important;
+    font-size: large !important;
   }
   nav.logo {
     margin-right: 0px !important;
@@ -398,6 +399,42 @@ html {
   text-decoration: none;
   padding: 12px 40px;
   margin-left: 40px;
+}
+
+.hover-me {
+  position: absolute;
+  width: 200px;
+  top: 60px;
+  right: 100px;
+}
+
+#hideMe {
+  -webkit-animation: cssAnimation 5s forwards;
+  animation: cssAnimation 5s forwards;
+}
+
+@keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes cssAnimation {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .landing-photo {

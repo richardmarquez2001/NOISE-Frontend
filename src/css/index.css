@@ -3,6 +3,12 @@
   src: url(./fonts/Aileron/Aileron-Regular.ttf);
 }
 
+.logo {
+  margin-right: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -13,6 +19,143 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.logo-container {
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-body {
+  position: absolute;
+  margin-top: 100px;
+  right: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+}
+
+.login-body h1 {
+  color: #6E4CE6;
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.login-body form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+}
+
+.login-body form input {
+  border: none;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  color: #5A5A5A;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.login-body form .forgot-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 10px 0px 20px 0px;
+}
+
+.login-body form .forgot-container span {
+  color: #5A5A5A;
+  font-size: 15px;
+}
+
+.login-body form .forgot-container span:hover {
+  color: #6E4CE6;
+}
+
+.login-body form button {
+  border: none;
+  font-size: 20px;
+  background-color: #6E4CE6;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+}
+
+.login-body .reg-here-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 300px;
+}
+
+.login-body .reg-here-container p {
+  margin-top: 100px;
+  color: #5A5A5A;
+  font-size: 15px;
+}
+
+.login-body .reg-here-container p span {
+  color: #5A5A5A;
+  text-decoration: underline;
+}
+
+.login-body .reg-here-container p span:hover {
+  color: #6E4CE6;
+}
+
+.login-photo {
+  z-index: -1;
+  position: absolute;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+
+@media (max-width: 1600px) {
+  .login-body {
+    right: 20%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .login-body {
+    position: static;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 100px;
+  }
+  .login-photo {
+    display: none;
+  }
 }
 
 .navbar {
@@ -60,12 +203,6 @@ html {
   font-weight: bold;
 }
 
-.navbar .logo {
-  margin-right: 50px;
-  font-size: 40px;
-  font-weight: bold;
-}
-
 @media (max-width: 1200px) {
   .links {
     width: 60% !important;
@@ -80,7 +217,7 @@ html {
   .links {
     width: 100% !important;
   }
-  .logo {
+  nav.logo {
     margin-right: 0px !important;
   }
 }

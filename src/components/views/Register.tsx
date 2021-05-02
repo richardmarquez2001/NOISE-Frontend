@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from 'react-router-dom';
 import RegisterUser from "../actions/RegisterUser";
 
 export default function Register() {
@@ -21,19 +21,6 @@ export default function Register() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    axios.post(`https://ruhack-noise.herokuapp.com/users/login`,
-      {
-        email: fields.email,
-        password: fields.password
-      }
-    ).then(res => {
-      console.log(res)
-      localStorage.setItem('token', res.data.token)
-      history.push("/home")
-    }, err =>{
-      // FAILED
-      console.log("LOGIN FAILED")
-    })
   }
 
   return (

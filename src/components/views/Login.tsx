@@ -26,7 +26,7 @@ export default function Login() {
       }
     ).then(res => {
       console.log(res)
-      localStorage.setItem('token', res.data.token)
+      localStorage.setItem('token', res.data.accessToken)
       history.push("/home")
     }, err =>{
       // FAILED

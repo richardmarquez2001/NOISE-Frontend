@@ -8,6 +8,7 @@ import Landing from "./components/views/Landing";
 import HomeWrapper from "./components/views/HomeWrapper";
 import MessagesWrapper from "./components/views/MessagesWrapper";
 import ProfileWrapper from "./components/views/ProfileWrapper";
+import CreateProjectWrapper from "./components/views/CreateProjectWrapper";
 
 function App() {
   return (
@@ -32,9 +33,12 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
-          <Route path="/">
-            <Landing />
+          <Route path="/createproject">
+            <CreateProjectWrapper />
           </Route>
+          <Route path="/">
+          </Route>
+            <Landing />
         </Switch>
       </Router>
     </div>

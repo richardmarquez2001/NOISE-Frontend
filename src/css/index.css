@@ -231,7 +231,7 @@ html {
 }
 
 .content-container .home-container .project-container .profile-info .city {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   font-weight: normal;
 }
@@ -244,7 +244,7 @@ html {
 
 .content-container .home-container .project-container .profile-info .tag {
   margin-top: 20px;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   background-color: #dbdbdb;
   padding: 10px;
@@ -259,12 +259,12 @@ html {
 
 .content-container .home-container .project-container .project-info .project-name {
   color: #7dbcfb;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .content-container .home-container .project-container .project-info .project-desc {
   padding: 20px 0px;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .content-container .home-container .project-container .project-info h2 {
@@ -976,10 +976,22 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .profile-container main .bio-container p {
-  font-size: 25px;
+  font-size: 18px;
+  border: none;
+}
+
+.profile-container main .bio-container input {
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  width: 300px;
+  padding-left: 10px;
 }
 
 .profile-container main .interested-positions-containers {
@@ -1004,8 +1016,13 @@ html {
   border-radius: 15px;
 }
 
+.profile-container main .interested-positions-containers .interest-container .interest a {
+  color: red;
+  text-decoration: none;
+}
+
 .profile-container main .interested-positions-containers .interest-container #interest1 {
-  background-color: #FFBAA5;
+  background-color: #c0c0c0;
 }
 
 .profile-container main .interested-positions-containers .interest-container #interest2 {
@@ -1014,6 +1031,14 @@ html {
 
 .profile-container main .interested-positions-containers .interest-container #interest3 {
   background-color: #FFF78A;
+}
+
+.profile-container main .interested-positions-containers .interested-box {
+  border: none;
+  padding: 10px;
+  font-size: 15px;
+  width: 300px;
+  padding-left: 10px;
 }
 
 .profile-container main .link-container {
@@ -1025,14 +1050,23 @@ html {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 40px;
+}
+
+.profile-container main .link-container .input-container p {
+  font-size: 18px;
+  border: none;
 }
 
 .profile-container main .link-container .input-container input {
   border: none;
-  padding: 5px;
-  font-size: 25px;
+  padding: 10px;
+  font-size: 15px;
   width: 300px;
+  padding-left: 10px;
 }
 
 .profile-container main .socials-container .inner-socials-container {
@@ -1047,11 +1081,26 @@ html {
   margin-bottom: 40px;
 }
 
-.profile-container main .socials-container .inner-socials-container div {
+.profile-container main .socials-container .inner-socials-container .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: white;
   margin: 10px;
   padding: 10px 100px;
   border-radius: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-container main .socials-container .inner-socials-container .social .icon {
+  margin-right: 20px;
+}
+
+.profile-container main .socials-container .inner-socials-container .social .icon svg {
+  height: 20px;
+  width: 20px;
 }
 
 .profile-container main .talent-container .images-container {

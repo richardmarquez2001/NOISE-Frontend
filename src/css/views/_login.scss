@@ -33,8 +33,11 @@
     }
     .forgot-container {
       display: flex;
-      justify-content: flex-end;
+      justify-content: space-between;
       padding: 10px 0px 20px 0px;
+      div {
+        color: #DD0244;
+      }
       span {
         color: $input-text-color;
         font-size: 15px;

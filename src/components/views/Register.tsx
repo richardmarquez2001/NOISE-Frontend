@@ -68,14 +68,14 @@ export default function Register() {
               type="text"
               onChange={handleChange}
               name="firstName"
-              placeholder="First Name"
+              placeholder="first name"
               value={fields.firstName}
             />
             <input
               type="text"
               onChange={handleChange}
               name="lastName"
-              placeholder="Last Name"
+              placeholder="last name"
               value={fields.lastName}
             />
           </div>
@@ -85,14 +85,14 @@ export default function Register() {
               type="text"
               onChange={handleChange}
               name="email"
-              placeholder="Email"
+              placeholder="email"
               value={fields.email}
             />
             <input
               type="text"
               onChange={handleChange}
               name="city"
-              placeholder="City"
+              placeholder="city"
               value={fields.city}
             />
           </div>
@@ -102,7 +102,7 @@ export default function Register() {
               type="password"
               onChange={handleChange}
               name="password"
-              placeholder="Password"
+              placeholder="password"
               value={fields.password}
             />
             <input
@@ -110,7 +110,7 @@ export default function Register() {
               type="password"
               onChange={handleChange}
               name="verifypassword"
-              placeholder="Re-enter Password"
+              placeholder="re-enter password"
               value={fields.verifypassword}
             />
           </div>

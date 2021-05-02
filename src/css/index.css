@@ -80,10 +80,14 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px 0px 20px 0px;
+}
+
+.login-body form .forgot-container div {
+  color: #DD0244;
 }
 
 .login-body form .forgot-container span {

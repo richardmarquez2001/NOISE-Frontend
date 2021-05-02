@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import loginPicture from "../../media/img/loginPicture.png";
-import { Link, useHistory } from 'react-router-dom';
-import axios from 'axios';
+import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
 export default function Login() {
-
   const [fields, setFields] = useState({
     email: "",
     password: "",
   });
 
-  const[errorOccured, setErrorOccured] = useState(false);
+  const [errorOccured, setErrorOccured] = useState(false);
 
   const history = useHistory();
 
@@ -21,23 +20,26 @@ export default function Login() {
   }
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
-    
     let data = JSON.stringify({
       email: fields.email,
-      password: fields.password
+      password: fields.password,
     });
-    axios.post(`https://ruhack-noise.herokuapp.com/users/login`, JSON.parse(data))
-      .then(res => {
-      setErrorOccured(false);
-      console.log("SHEESH");
-      console.log(res)
-      localStorage.setItem('token', res.data.accessToken)
-      history.push("/home")
-    }, err =>{
-      setErrorOccured(true);
-      console.log("LOGIN FAILED")
-    })
-    event.preventDefault(); 
+    axios
+      .post(`https://ruhack-noise.herokuapp.com/users/login`, JSON.parse(data))
+      .then(
+        (res) => {
+          setErrorOccured(false);
+          console.log("SHEESH");
+          console.log(res);
+          localStorage.setItem("token", res.data.accessToken);
+          history.push("/home");
+        },
+        (err) => {
+          setErrorOccured(true);
+          console.log("LOGIN FAILED");
+        }
+      );
+    event.preventDefault();
   }
 
   return (
@@ -63,6 +65,7 @@ export default function Login() {
             value={fields.password}
           />
           <div className="forgot-container">
+            <div>{errorOccured && <div>*Invalid Login</div>}</div>
             <Link to="#" style={{ textDecoration: "None" }}>
               <span>Forgot Password?</span>
             </Link>
@@ -77,7 +80,6 @@ export default function Login() {
             </Link>
           </p>
         </div>
-        {errorOccured && <div>Invalid Login</div>}
       </div>
       <img
         className="login-photo"

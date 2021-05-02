@@ -50,6 +50,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  .body {
+    padding: 10px !important;
+  }
+}
+
 .landing-container2 {
   background: rgb(110, 76, 230);
   background: linear-gradient(

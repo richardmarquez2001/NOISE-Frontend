@@ -147,6 +147,12 @@ html {
   }
 }
 
+@media (max-width: 600px) {
+  .body {
+    padding: 10px !important;
+  }
+}
+
 .landing-container2 {
   background: #6e4ce6;
   background: linear-gradient(135deg, #6e4ce6 0%, #bfdbf7 100%);

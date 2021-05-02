@@ -17,14 +17,20 @@ import hoverMe from "../../media/img/hoverme.png";
 export default function Landing() {
   return (
     <React.Fragment>
-      <img className="hover-me" id="hideMe" src={hoverMe} alt="hover me pointing to logo"/>
+      <img
+        className="hover-me"
+        id="hideMe"
+        src={hoverMe}
+        alt="hover me pointing to logo"
+      />
       <Navbar />
       <div className="landing-container">
         <div className="body">
           <Slogan />
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lobortis
-            velit nunc, pellentesque sed purus praesent. Non mollis.
+            Perfect for new talents to gain exposure in the field or those who
+            are starting a project and looking for local creators to get the job
+            done.
           </p>
           <Link style={{ textDecoration: "None" }} to="/login">
             <span id="login-btn">Login</span>
@@ -44,10 +50,17 @@ export default function Landing() {
           about
         </h1>
         <p className="about-msg">
-          Noise is....Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nunc, nec magna convallis malesuada eget aliquam id. Sit dolor cursus
-          viverra sit. Lobortis nisi ac, libero risus ante semper pellentesque.
-          Vel ac mauris tempor felis luctus.
+          The <em id="noise-team">Noise Team</em> noticed that many people have difficulty
+          finding industry jobs due to lack of work experience. We created Noise
+          to expose new talents with local projects in their area!
+        </p>
+        <br/>
+        <p className="about-msg">
+          Noise is a platform created to connect local creators. Whether you are{" "}
+          <em>TALENT</em> (a small creator who is looking for freelance projects
+          to gain experience and expand their portfolio) or{" "}
+          <em>A TALENT SEEKER</em> (someone starting a project and looking for
+          local creators to get the job done), Noise is for you.
         </p>
         <h1 id="how" className="titles">
           how it works

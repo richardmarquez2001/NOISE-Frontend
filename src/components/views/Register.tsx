@@ -43,7 +43,7 @@ export default function Register() {
           localStorage.setItem("token", res.data.token);
           localStorage.setItem("user", res.data.user);
           setErrorOccured(false);
-          history.push("/home");
+          history.push("/profile");
         },
         (err) => {
           // FAILED

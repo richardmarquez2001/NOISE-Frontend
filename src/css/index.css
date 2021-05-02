@@ -773,6 +773,16 @@ html {
   margin: 0px 10% 0px 10%;
 }
 
+.landing-container2 .about-msg em {
+  color: #FAE579;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.landing-container2 .about-msg #noise-team {
+  font-weight: normal;
+}
+
 .landing-container2 .how-card-container {
   display: -webkit-box;
   display: -ms-flexbox;

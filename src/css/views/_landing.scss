@@ -97,6 +97,14 @@
     color: white;
     font-size: 30px;
     margin: 0px 10% 0px 10%;
+    em {
+      color: #FAE579;
+      font-weight: bold;
+      font-style: normal;
+    }
+    #noise-team {
+      font-weight: normal;
+    }
   }
   .how-card-container {
     display: flex;

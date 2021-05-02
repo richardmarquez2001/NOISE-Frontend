@@ -6,8 +6,8 @@ export default function Sidebar(props: any) {
     <nav className="sidebar">
       <h1 className="logo shake">noise.</h1>
       <div className="link">
-        <Link style={{ textDecoration: "None" }} to="/home">
-          <p className={props.home}>home</p>
+        <Link style={{ textDecoration: "None" }} to="/profile">
+          <p className={props.profile}>profile</p>
         </Link>
       </div>
       <div className="link">
@@ -16,8 +16,8 @@ export default function Sidebar(props: any) {
         </Link>
       </div>
       <div className="link">
-        <Link style={{ textDecoration: "None" }} to="/messages">
-          <p className={props.messages}>messages</p>
+        <Link style={{ textDecoration: "None" }} to="/home">
+          <p className={props.home}>find project</p>
         </Link>
       </div>
       <div className="link">
@@ -26,8 +26,8 @@ export default function Sidebar(props: any) {
         </Link>
       </div>
       <div className="link">
-        <Link style={{ textDecoration: "None" }} to="/profile">
-          <p className={props.profile}>profile</p>
+        <Link style={{ textDecoration: "None" }} to="/messages">
+          <p className={props.messages}>messages</p>
         </Link>
       </div>
       <div className="link logout">

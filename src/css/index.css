@@ -587,10 +587,31 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 200px;
 }
 
 .sidebar .logo {
   margin: 30px 50px;
+  margin-bottom: 80px;
+}
+
+.sidebar .link {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+
+.sidebar .link p {
+  color: #8D8D8D;
+}
+
+.sidebar .link p:hover {
+  color: #6E4CE6;
+}
+
+.sidebar .logout {
+  position: absolute;
+  bottom: 40px;
 }
 
 /* width */

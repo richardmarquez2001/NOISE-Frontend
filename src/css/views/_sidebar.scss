@@ -29,6 +29,8 @@
 
 .content-container {
   position: absolute;
-  width: calc(100vw - 220px);
+  width: calc(100vw - 200px);
+  height: 100vh;
   right: 0;
+  overflow: scroll;
 }

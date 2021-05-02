@@ -1,5 +1,96 @@
 .content-container {
-  .desc-container {
-    
+  button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    height: 70px;
+    border-radius: 50%;
+  }
+  #no {
+    left: 80%;
+    top: 60px;
+    margin-bottom: 60px;
+    &:hover {
+      background-color: #fda0a0;
+    }
+  }
+  #yes {
+    left: 85%;
+    top: 60px;
+    margin-bottom: 60px;
+    &:hover {
+      background-color: #a0fda0;
+    }
+  }
+  .home-container {
+    margin: 50px;
+    .desc-container {
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+      }
+      h2 {
+        margin-top: 10px;
+        font-size: 30px;
+      }
+    }
+    .project-container {
+      display: flex;
+      margin-top: 50px;
+      .profile-info {
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f4f4f4;
+        margin-right: 50px;
+        padding: 30px;
+        img {
+          border-radius: 50px;
+          width: 200px;
+          height: 200px;
+        }
+        .owner-name {
+          margin-top: 30px;
+          font-size: 30px;
+        }
+        .city {
+          font-size: 20px;
+        }
+        .looking-for {
+          margin-top: 50px;
+          font-size: 30px;
+        }
+        .tag {
+          margin-top: 20px;
+          font-size: 20px;
+        }
+      }
+      .project-info {
+        border-radius: 10px;
+        background-color: #f4f4f4;
+        padding: 30px;
+        .project-name {
+          color: #7dbcfb;
+          font-size: 50px;
+        }
+        .project-desc {
+          padding: 20px 0px;
+          font-size: 20px;
+        }
+        h2 {
+          font-size: 30px;
+          margin-top: 30px;
+        }
+        .img-container {
+          img {
+            border-radius: 10px;
+            width: 300px;
+            height: 200px;
+            margin: 20px;
+          }
+        }
+      }
+    }
   }
 }

@@ -15,9 +15,9 @@ export default function Project(props: any) {
       </div>
       <div className="project-info">
         <h1 className="project-name">{props.projectName}</h1>
-        <p className="project-info">{props.projectInfo}</p>
-        <h2>Project Images</h2>
-        <div className="img-scroller">
+        <p className="project-desc">{props.projectInfo}</p>
+        <div className="img-container">
+          <h2>Project Images</h2>
           {props.images.map((imgURL: any) => {
             return <img className="project-img" src={imgURL} />;
           })}

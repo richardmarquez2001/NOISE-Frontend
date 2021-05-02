@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-
+import { Link, useHistory } from 'react-router-dom';
+import axios from 'axios';
 export default function Login() {
+
   const [fields, setFields] = useState({
     email: "",
     password: "",
   });
+
+  const history = useHistory();
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>): void {
     const { name, value } = e.target;
@@ -16,9 +19,19 @@ export default function Login() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    console.log(`values were submitted`);
-    console.log(fields);
-    // a call to an external ts file is called here
+    axios.post(`https://ruhack-noise.herokuapp.com/users/login`,
+      {
+        email: fields.email,
+        password: fields.password
+      }
+    ).then(res => {
+      console.log(res)
+      localStorage.setItem('token', res.data.token)
+      history.push("/home")
+    }, err =>{
+      // FAILED
+      console.log("LOGIN FAILED")
+    })
   }
 
   return (

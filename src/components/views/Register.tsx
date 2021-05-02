@@ -21,10 +21,19 @@ export default function Register() {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>): void {
     event.preventDefault();
-    let reg = new RegisterUser();
-    reg.postUsers(fields);
-
-    // a call to an external ts file is called here
+    axios.post(`https://ruhack-noise.herokuapp.com/users/login`,
+      {
+        email: fields.email,
+        password: fields.password
+      }
+    ).then(res => {
+      console.log(res)
+      localStorage.setItem('token', res.data.token)
+      history.push("/home")
+    }, err =>{
+      // FAILED
+      console.log("LOGIN FAILED")
+    })
   }
 
   return (

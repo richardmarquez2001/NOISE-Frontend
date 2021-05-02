@@ -35,7 +35,15 @@ export default () => {
   if (match==null){ getNext()}
   const getObject = ()=>{
     if(match!=null){
-      return <p>match.name</p>
+      return (<Project
+        ownerImg={match.owner.image}
+        ownerName={match.owner.name}
+        city={match.owner.city}
+        tags={match.tags}
+        projectName={match.name}
+        projectInfo={match.description}
+        images={match.images}
+      />)
     }
   }
   return (
@@ -43,7 +51,7 @@ export default () => {
       <div className="desc-container">
         <h1>Browse through local projects and opportunities!</h1>
         <h2>Get matched and gain experience.</h2>
-        getObject()
+        {getObject()}
       </div>
       <Project
         ownerImg="https://picsum.photos/200"

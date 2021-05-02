@@ -22,7 +22,7 @@ export default function Sidebar(props: any) {
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/createproject">
-        <p className={props.profile}>create project</p>
+        <p className={props.createproject}>create project</p>
         </Link>
       </div>
       <div className="link">

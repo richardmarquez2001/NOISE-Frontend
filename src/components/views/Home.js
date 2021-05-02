@@ -23,7 +23,6 @@ export default () => {
       .then((res) => {
         let projects = res.data;
         let project = projects[Math.floor(Math.random() * projects.length)];
-        console.log(project);
         setMatch(project);
       })
       .catch((err) => {

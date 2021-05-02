@@ -41,6 +41,7 @@ export default function Register() {
         (res) => {
           console.log(res);
           localStorage.setItem("token", res.data.token);
+          localStorage.setItem("user", res.data.user);
           setErrorOccured(false);
           history.push("/home");
         },
@@ -51,7 +52,7 @@ export default function Register() {
         }
       );
     }
-    
+
   }
 
   return (

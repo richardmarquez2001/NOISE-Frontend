@@ -45,8 +45,15 @@
     .bio-container {
       display: flex;
       margin-bottom: 40px;
+      align-items: center;
       p {
-        font-size: 25px;
+        font-size: 18px;
+        border: none;
+      }
+      input {
+        font-size: 15px;
+        border: none;
+        padding-left: 10px;
       }
     }
     .interested-positions-containers {
@@ -60,9 +67,13 @@
           margin: 10px 20px;
           padding: 5px;
           border-radius: 15px;
+          a {
+            color: red;
+            text-decoration: none;
+          }
         }
         #interest1 {
-          background-color: #FFBAA5;
+          background-color: #c0c0c0;
         }
         #interest2 {
           background-color: #FFC369;
@@ -71,18 +82,31 @@
           background-color: #FFF78A;
         }
       }
+      .interested-box {
+        border: none;
+        padding: 10px;
+        font-size: 15px;
+        width: 300px;
+        padding-left: 10px;
+      }
     }
     .link-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
+      align-items: center;
       margin-bottom: 40px;
       .input-container {
+        p {
+          font-size: 18px;
+          border: none;
+        }
         input {
           border: none;
-          padding: 5px;
-          font-size: 25px;
+          padding: 10px;
+          font-size: 15px;
           width: 300px;
+          padding-left: 10px;
         }
       }
     }
@@ -92,11 +116,20 @@
         flex-wrap: wrap;
         justify-content: space-evenly;
         margin-bottom: 40px;
-        div {
+        .social {
+          display: flex;
           background-color: white;
           margin: 10px;
           padding: 10px 100px;
           border-radius: 20px;
+          align-items: center;
+          .icon {
+            margin-right: 20px;
+            svg {
+              height: 20px;
+              width: 20px;
+            }
+          }
         }
       }
     }

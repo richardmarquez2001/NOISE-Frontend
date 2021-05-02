@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+## 💫 Inspiration 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+During quarantine, it is often hard to meet new people and collaborate on new projects together. Particularly, our team noticed that we either can't think of a new project idea, or we have an idea but don't know how to get started. To combat this problem, we created a platform called "noise.", where local creators can collaborate with others on side projects depending on their skills and location. 
 
-## Available Scripts
+## 😮 What noise. does
 
-In the project directory, you can run:
+After signing up for noise. , users can select tags that show what technologies they know, and where they're located. Additionally, users can create a project, and list which technologies they need. From there, our matching algorithm recommends the user projects that they can join or sends their project into the community where people can request to collaborate with them.
 
-### `yarn start`
+## 🔨 How we built it
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The design process began with our designer creating the UI for the web and mobile application, and the developers creating a UML diagram. All images used in the project were sourced from [here](https://www.figma.com/file/0AnfgxBYXR7VE7HRA7pKYI/SALY-3D-Illustration-Pack-Community?node-id=7%3A4). 
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The front end was created using React with typescript.
 
-### `yarn test`
+For the backend, we created an API using express.js and used a mongo database to store user information. The images used in the project, are all stored in an AWS bucket.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 😰 Challenges we ran into
 
-### `yarn build`
+- Connecting the front-end web application with the backend REST API
+- Setting up and storing JWTs
+- Inexperience with new technologies such as Figma and React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 😤 Accomplishments that we're proud of
+- How well our team was able to collaborate in low time, high-pressure situations.
+- The amount of the actual web application that we were able to complete and get function.
+- Creating the design for both the web app and mobile app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧠 What we learned
+- We learned how to create a functioning web application.
+- Furthered our understanding
+of React and how to structure components effectively.
+- Learned how to efficiently use UML diagrams and Figma to prototype our application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 💜 What's next for noise.
+- Create full functionality for the mobile app!
+- Launch the product!

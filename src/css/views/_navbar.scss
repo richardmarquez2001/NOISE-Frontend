@@ -24,11 +24,6 @@
       }
     }
   }
-  .logo {
-    margin-right: 50px;
-    font-size: 40px;
-    font-weight: bold;
-  }
 }
 
 @media (max-width: 1200px) {
@@ -45,7 +40,7 @@
   .links {
     width: 100% !important;
   }
-  .logo {
+  nav.logo {
     margin-right: 0px !important;
   }
 }

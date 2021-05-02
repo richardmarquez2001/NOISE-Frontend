@@ -32,7 +32,11 @@ export default function Landing() {
           </Link>
         </div>
       </div>
-      <img className="landing-photo" src={landingPicture} alt="" />
+      <img
+        className="landing-photo"
+        src={landingPicture}
+        alt="girl running with excitment"
+      />
       <div className="landing-container2">
         <h1 id="about" className="titles">
           about

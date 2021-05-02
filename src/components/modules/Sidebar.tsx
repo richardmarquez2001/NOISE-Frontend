@@ -1,28 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar(props: any) {
   return (
     <nav className="sidebar">
       <h1 className="logo shake">noise.</h1>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/home">
-          <p>home</p>
+          <p className={props.home}>home</p>
         </Link>
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/dashboard">
-          <p>dashboard</p>
+          <p className={props.dashboard}>dashboard</p>
         </Link>
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/messages">
-          <p>messages</p>
+          <p className={props.messages}>messages</p>
         </Link>
       </div>
       <div className="link">
         <Link style={{ textDecoration: "None" }} to="/profile">
-          <p>profile</p>
+          <p className={props.profile}>profile</p>
         </Link>
       </div>
       <div className="link logout">

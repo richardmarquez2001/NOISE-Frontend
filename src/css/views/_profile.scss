@@ -1,0 +1,117 @@
+.profile-container {
+  margin: 50px;
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .left-container {
+      display: flex;
+      align-items: center;
+      .img-container {
+        img {
+          border-radius: 20px;
+          width: 100px;
+          height: 100px;
+          margin-right: 20px;
+        }
+      }
+      .header-container {
+        h1 {
+          margin-bottom: 5px;
+          font-size: 40px;
+        }
+        h2 {
+          font-size: 30px;
+        }
+      }
+    }
+    .right-container {
+      span {
+        color: black;
+        text-decoration: underline;
+        font-size: 20px;
+      }
+    }
+  }
+  main {
+    margin-top: 40px;
+    background-color: #F4F4F4;
+    padding: 30px;
+    border-radius: 20px;
+    h1 {
+      margin-right: 20px;
+      font-size: 30px;
+    }
+    .bio-container {
+      display: flex;
+      margin-bottom: 40px;
+      p {
+        font-size: 25px;
+      }
+    }
+    .interested-positions-containers {
+      margin-bottom: 40px;
+      .interest-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .interest {
+          font-size: 25px;
+          margin: 10px 20px;
+          padding: 5px;
+          border-radius: 15px;
+        }
+        #interest1 {
+          background-color: #FFBAA5;
+        }
+        #interest2 {
+          background-color: #FFC369;
+        }
+        #interest3 {
+          background-color: #FFF78A;
+        }
+      }
+    }
+    .link-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-bottom: 40px;
+      .input-container {
+        input {
+          border: none;
+          padding: 5px;
+          font-size: 25px;
+          width: 300px;
+        }
+      }
+    }
+    .socials-container {
+      .inner-socials-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        margin-bottom: 40px;
+        div {
+          background-color: white;
+          margin: 10px;
+          padding: 10px 100px;
+          border-radius: 20px;
+        }
+      }
+    }
+    .talent-container {
+      .images-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .talent-entry {
+          margin: 10px;
+          img {
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}

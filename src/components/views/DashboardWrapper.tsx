@@ -5,7 +5,7 @@ import Sidebar from "../modules/Sidebar";
 export default function DashboardWrapper() {
   return (
     <React.Fragment>
-      <Sidebar />
+      <Sidebar dashboard="purple"/>
       <Dashboard />
     </React.Fragment>
   );

@@ -5,7 +5,7 @@ import Profile from "./Profile";
 export default function ProfileWrapper() {
   return (
     <React.Fragment>
-      <Sidebar />
+      <Sidebar profile="purple"/>
       <Profile />
     </React.Fragment>
   );

@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Recomended() {
+export default function Recommended(props: any) {
   return (
-    <React.Fragment>
-      <h1>Reccomended</h1>
-      <div>stuff</div>
-    </React.Fragment>
+    <div className="recommended-container">
+      <h1>Recommended</h1>
+      <div><img src={props.img} alt=""/></div>
+    </div>
   );
 }

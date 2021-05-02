@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Requests() {
+export default function Requests(props: any) {
   return (
-    <React.Fragment>
+    <div className="requests-container">
       <h1>Recent Requests</h1>
-      <div>stuff</div>
-    </React.Fragment>
+      <div><img src={props.img} alt=""/></div>
+    </div>
   );
 }

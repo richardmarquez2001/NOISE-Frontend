@@ -18,9 +18,11 @@ export default function Project(props: any) {
         <p className="project-desc">{props.projectInfo}</p>
         <div className="img-container">
           <h2>Project Images</h2>
-          {props.images.map((imgURL: any) => {
-            return <img className="project-img" src={imgURL} />;
-          })}
+          <div className="images">
+            {props.images.map((imgURL: any) => {
+              return <img className="project-img" src={imgURL} />;
+            })}
+          </div>
         </div>
       </div>
     </div>

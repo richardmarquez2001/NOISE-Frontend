@@ -5,7 +5,7 @@ import Messages from "./Messages";
 export default function MessagesWrapper() {
   return (
     <React.Fragment>
-      <Sidebar />
+      <Sidebar messages="purple"/>
       <Messages />
     </React.Fragment>
   );
